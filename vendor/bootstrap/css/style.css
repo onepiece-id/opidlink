@@ -1,0 +1,49 @@
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+  color: white;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: rgb(0, 169, 224);
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 5px 0 5px 0;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.coeg {
+  margin: 0 0 0 13.2em !important;
+}
+
+.coegg {
+  margin: 0 0 0 26.9em !important;
+}
+
+.card-body {
+  z-index: 1 !important;
+}
+
+.card-body a {
+  color: #343a40;
+  transition: 0.5s;
+}
+
+.card-body a:hover {
+  color: rgb(0, 169, 224);
+  transition: 0.5s;
+}

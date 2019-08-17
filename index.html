@@ -1,1 +1,148 @@
-My GitHub Page
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Opid Dynamic Link</title>
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+    <!-- Bootstrap core CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCT7KAFk3lOpTp_FNDw940tKOYWF2OplyI",
+            authDomain: "opidlink.firebaseapp.com",
+            databaseURL: "https://opidlink.firebaseio.com",
+            projectId: "opidlink",
+            storageBucket: "opidlink.appspot.com",
+            messagingSenderId: "264910655680",
+            appId: "1:264910655680:web:2c7e927786ddf490"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <i class="fas fa-home"></i>&nbsp; Onepiece-id
+                Dynamic Link</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a title="Home" class="nav-link" href="https://opid.page.link/4qWA" target="_blank">
+                            <i class="fas fa-home"></i>&nbsp;
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a title="Upload Image" class="nav-link" href="https://opid.page.link/VKt6">
+                            <i class="fas fa-upload"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h5 class="mt-5">Gunakan halaman ini untuk membuat <b>Dynamic Link</b> dan <b>Melihat Link</b> yang
+                    sudah di ubah sebelumnya</h5>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <br>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a id="resultLink" href="#">Dynamic Link</a>
+                                </h5>
+                                <p class="card-text">
+                                    <br>
+                                    <input type="text" class="form-control" id="lurl"
+                                        placeholder="https://onepiece-id.web.app">
+                                    <br>
+                                    <button id="createl" type="button" class="btn btn-primary"
+                                        onclick="createLink();"><i class="fas fa-link"></i> Create</button>
+                                </p>
+                            </div>
+                            <p>Link harus diawali dengan <b>HTTP</b> atau <b>HTTPS</b></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <br>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a id="deresult" href="#">Show Link</a>
+                                </h5>
+                                <p class="card-text">
+                                    <br>
+                                    <input type="text" class="form-control" id="surl"
+                                        placeholder="https://opid.page.link/gM7N">
+                                    <br>
+                                    <button id="decreatel" type="button" class="btn btn-primary"
+                                        onclick="decreateLink();"><i class="fas fa-unlink"></i> Show</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="coeg">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="row">
+                            <ul id="ltable" class="none" style="display: none;"></ul>
+                            <button type="button" class="btn btn-primary btn-block"
+                                onclick="copyToClipboard('#resultLink')">
+                                <i class="far fa-copy"></i>&nbsp;Copy to Clipboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Bootstrap core JavaScript -->
+        <script text="javasccript">
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+            }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./qrcode/jquery.qrcode.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/2.0.4/dexie.min.js"
+            integrity="sha256-ubffRsoh9QK5xJC/u3s3drtGFBZUHBm9bHFRzYvtkJI=" crossorigin="anonymous"></script>
+        <script src="clip/clipboard.min.js"></script>
+        <script src="vendor/jquery/scripts.js"></script>
+        <div class="footer">
+            <p style="margin: 0 0 0 0 !important;"><i class="far fa-copyright"></i> 2019 |
+                <a href="https://opid.page.link/gM7N">Onepiece-id.web.app</a> |
+                <a href="https://opid.page.link/p4hB">Alexander Babich</a> | Powered By
+                <a href="https://opid.page.link/bTCXeT2F1FbNE7xC9"> Firebase Dynamic Link</a>
+            </p>
+        </div>
+</body>
+
+</html>
